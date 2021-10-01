@@ -1,0 +1,11 @@
+stages:
+  - test
+
+test:
+  stage: test
+  image: 3kezoh/composer:php-5.6
+  script:
+    - composer install
+    - ./vendor/bin/phpunit
+  except:
+    - master
