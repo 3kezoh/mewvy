@@ -8,13 +8,8 @@ Mewvy is a dummy project that aims to gather a maximum of good practices for a p
 
 ## Prerequisites
 
-### Authentication 🔒
-
-You should **really** consider using SSH to interact securely with, which provides a secure channel over an insecure network. [More informations](https://docs.gitlab.com/ee/ssh/)
-
-### Verified commits ✅
-
-Using a GPG key, you can locally sign commits and tags to enforce their authenticity.
+- [PHP >= 7.2.5](https://www.php.net/manual/fr/install.php)
+- [docker-compose](https://docs.docker.com/compose/install/)
 
 ## Installation
 
@@ -30,29 +25,62 @@ git clone https://gitlab.com/iw-intensive-week-1-2021/groupe-10-iw3-4.git mewvy
 git clone https://github.com/3kezoh/blog.git
 ```
 
-Use [docker-composer](https://docs.docker.com/compose/install/) to bootstrap the project
+Use [docker-compose](https://docs.docker.com/compose/install/) to bootstrap the project
 
 ```sh
 docker-compose up --build
 ```
 
-Deploy db:
+Deploy the database:
+
 ```sh
 php artisan migrate
 ```
 
-Insert random informations inside of the db:
+Insert random information into the database:
+
 ```sh
 php artisan db:seed
 ```
 
 ## Endpoints
 
-| Nom | Endpoint | Description |
-|--|--|--|
-| home | / | Génère une JSONResponse contenant deux films
-| time| /time | Génère une JSONResponse contenant le timestamp UNIX actuel
+| Nom  | Endpoint | Description                                                |
+| ---- | -------- | ---------------------------------------------------------- |
+| home | /        | Génère une JSONResponse contenant deux films               |
+| time | /time    | Génère une JSONResponse contenant le timestamp UNIX actuel |
 
+## Good Practices
+
+### Authentication 🔒
+
+You should **really** consider using SSH to interact securely with, which provides a secure channel over an insecure network. [More informations](https://docs.gitlab.com/ee/ssh/)
+
+### Verified commits ✅
+
+Using a GPG key, you can locally sign commits and tags to enforce their authenticity.
+
+### [Gitmoji](https://gitmoji.dev)
+
+Gitmoji is an initiative to standardize and explain the use of emojis on GitHub commit messages.
+
+> Example
+
+- ✨ Introduce new feature
+- 📄 Update LICENSE
+
+### Branch Naming conventions
+
+Not using proper naming conventions causes confusion and makes it difficult for the code maintenance team to maintain the code.
+
+Ypu can apply a simple and well known naming conventions
+
+> Example
+
+- master
+- feature, feature/google-oauth, feature/flex-component
+- release,
+- hotfix, hotfix/key-vulne
 
 ## [Code of Conduct](./CODE_OF_CONDUCT.md)
 
