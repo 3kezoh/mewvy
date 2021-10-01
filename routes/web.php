@@ -11,4 +11,7 @@
 |
 */
 
+use App\Http\Controllers\Controller;
+
 $app->get('/', ListingController::class);
+$app->get('/time', "Controller@getTime");
