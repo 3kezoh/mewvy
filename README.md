@@ -21,7 +21,13 @@ Using a GPG key, you can locally sign commits and tags to enforce their authenti
 Clone this repository
 
 ```sh
-git clone git@gitlab.com:iw-intensive-week-1-2021/groupe-10-iw3-4.git mewvy
+# Gitlab (prefered)
+git clone https://gitlab.com/iw-intensive-week-1-2021/groupe-10-iw3-4.git mewvy
+```
+
+```sh
+# Github
+git clone https://github.com/3kezoh/blog.git
 ```
 
 Use [docker-composer](https://docs.docker.com/compose/install/) to bootstrap the project
