@@ -6,6 +6,8 @@ test:
   image: 3kezoh/composer:php-5.6
   script:
     - composer install
+    - php artisan migrate
+    - php artisan db:seed
     - ./vendor/bin/phpunit
   except:
     - master
