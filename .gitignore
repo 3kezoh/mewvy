@@ -3,3 +3,7 @@
 Homestead.json
 Homestead.yaml
 .env
+/storage
+/run
+error_log
+public/Cxamppaphplogsphp_error_log

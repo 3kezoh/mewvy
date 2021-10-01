@@ -27,7 +27,17 @@ git clone git@gitlab.com:iw-intensive-week-1-2021/groupe-10-iw3-4.git mewvy
 Use [docker-composer](https://docs.docker.com/compose/install/) to bootstrap the project
 
 ```sh
-docker-compose up
+docker-compose up --build
+```
+
+Deploy db:
+```sh
+php artisan migrate
+```
+
+Insert random informations inside of the db:
+```sh
+php artisan db:seed
 ```
 
 ## [Code of Conduct](./CODE_OF_CONDUCT.md)
