@@ -40,6 +40,14 @@ Insert random informations inside of the db:
 php artisan db:seed
 ```
 
+## Endpoints
+
+| Nom | Endpoint | Description |
+|--|--|--|
+| home | / | Génère une JSONResponse contenant deux films
+| time| /time | Génère une JSONResponse contenant le timestamp UNIX actuel
+
+
 ## [Code of Conduct](./CODE_OF_CONDUCT.md)
 
 Mewvy has adopted a Code of Conduct that we expect project participants to adhere to. Please read [the full text](./CODE_OF_CONDUCT.md) so that you can understand what actions will and will not be tolerated.
