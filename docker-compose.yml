@@ -6,7 +6,8 @@ services:
       context: '.'
       args:
         uid: ${UID}
-    container_name: lumen-app
+    depends_on:
+      - mysql-db
     ports:
       - 8000:80
     environment:
@@ -23,7 +24,6 @@ services:
 
   mysql-db:
     image: mysql:5.7
-    container_name: mysql-db
     volumes:
       - ./run/var:/var/lib/mysql
     environment:

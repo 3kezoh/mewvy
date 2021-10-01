@@ -15,8 +15,10 @@ RUN apt-get update && apt-get install -y \
     sudo \
     unzip \
     zip \
- && rm -rf /var/lib/apt/lists/*
+    php*-mysql \
+&& rm -rf /var/lib/apt/lists/*
 
+RUN docker-php-ext-install mysql mysqli pdo pdo_mysql
 
 # 2. Apache configs + document root.
 RUN echo "ServerName lumen-app.local" >> /etc/apache2/apache2.conf
